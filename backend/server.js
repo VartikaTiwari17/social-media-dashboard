@@ -22,6 +22,7 @@ io.on("connection", socket => {
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/posts", require("./routes/post"));
+app.use("/api/users", require("./routes/user"));
 app.use("/api/analytics", require("./routes/analytics"));
 
 
