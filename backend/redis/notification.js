@@ -1,15 +1,13 @@
-const redis = require("redis");
+const { Redis } = require("@upstash/redis");
 
-const client = redis.createClient();
-
-client.on("error", (err) => console.error("Redis error:", err));
-client.on("connect", () => console.log("Redis connected"));
-
-client.connect(); // redis v4+ mein connect karna zaroori hai
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN,
+});
 
 const sendNotification = async (message) => {
   try {
-    await client.set("notification", message);
+    await redis.set("notification", message);
   } catch (err) {
     console.error("Notification failed:", err.message);
   }
