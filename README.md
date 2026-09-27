@@ -83,9 +83,10 @@ App will run on `http://localhost:3000` (or next available port).
 | PUT | `/api/users/unfollow/:id` | Unfollow a user | Yes |
 | GET | `/api/analytics` | Get platform stats | Yes |
 
+
 ## Live Demo
-- Frontend: _coming soon_
-- Backend API: _coming soon_
+- Frontend: https://social-media-dashboard-pearl-six.vercel.app/
+- Backend API: https://social-media-dashboard-9d8n.onrender.com
 
 ## Author
 **Vartika Tiwari**
